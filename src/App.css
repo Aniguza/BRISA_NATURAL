@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@theme {
+  --color-logo: #53594F;
+  --color-icons: #71775C;
+}
+
 #root {
   
   margin: 0 auto;
