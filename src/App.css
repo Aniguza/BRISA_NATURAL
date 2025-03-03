@@ -4,11 +4,15 @@
 @theme {
   --color-logo: #53594F;
   --color-icons: #71775C;
+  --color-primario: #898E6B;
+  --color-secondario: #63613D;
+  --color-texto: #544B46;
+  --color-butonPrimary: #FFEAD7;
 }
 
 #root {
   
   margin: 0 auto;
-  text-align: center;
+ 
 }
 
