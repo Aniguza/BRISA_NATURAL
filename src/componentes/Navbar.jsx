@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+
 
 import Logo from "../assets/img/Logo.png";
 
@@ -15,31 +15,11 @@ export const Navbar = () => {
     <div className="navbar bg-white borde-none fixed top-0 z-50 h-18">
       <div className="flex-1">
         <a className="flex items-center gap-2 cursor-pointer">
-          {/* Logotipo 
-          <span className="ml-10 text-logo font-bold md:text-sm lg:text-xl">
-            BRISA NATURAL
-          </span>*/}
-          <img src={Logo} alt="" className="w-22 ml-15"/>
+          <img src={Logo} alt="" className="w-22 ml-5 lg:ml-15" />
         </a>
       </div>
-      <div className="flex  items-center sm:gap-5 xl:gap-15">
-        {/* Buscador - Versión desktop */}
-        <div className="hidden md:flex items-center">
-          <label className="input bg-[#F2F2F2]">
-            <input type="search" className="grow " placeholder="Search" />
-            <SearchIcon className="text-icons " />
-          </label>
-        </div>
-
-        {/* Buscador - Versión móvil (solo icono) */}
-        <div className="md:hidden">
-          <button
-            className="btn btn-ghost btn-circle"
-            onClick={() => setIsSearchOpen(!isSearchOpen)}
-          >
-            <SearchIcon className="color-icons" />
-          </button>
-        </div>
+      <div className="flex gap-3 items-center md:gap-15">
+             
 
         {/* Avatar/Usuario */}
         <div className="dropdown dropdown-end">
@@ -95,14 +75,7 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {/* Buscador expandible para móvil */}
-      {isSearchOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white p-4 shadow-md md:hidden">
-          <label className="input">
-            <input type="search" className="grow" placeholder="Search" />
-          </label>
-        </div>
-      )}
+    
     </div>
   );
 };
