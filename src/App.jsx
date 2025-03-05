@@ -1,20 +1,19 @@
 import { react } from "react";
+import 'animate.css';
 
 import "./App.css";
 import "./index.css";
 import { Navbar } from "./componentes/Navbar";
-import { Menu } from "./componentes/Menu";
-import { Hero } from "./componentes/Hero";  
+import { Inicio } from "./Inicio";
 import { Footer } from "./componentes/Footer";
 
 function App() {
   return (
-    <>
+    <div className="animate__animated animate__fadeIn animate__slow">
       <Navbar />
-      <Menu />
-      <Hero />
+      <Inicio />
       <Footer />
-    </>
+    </div>
   );
 }
 

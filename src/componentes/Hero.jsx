@@ -28,7 +28,7 @@ export const Hero = () => {
       </div>
 
       {/* Hero Info */}
-      <div class="rounded md:grid grid-cols-2 grid-rows-1 gap-4 bg-[#fff] h-80">
+      <div class="rounded md:grid grid-cols-2 grid-rows-1 gap-4 bg-[#fff] h-80 max-w-7xl my-0 mx-auto">
         <div className="flex items-center justify-center p-30 ">
           <p class=" font-bold font-titulos text-primario text-2xl lg:text-4xl">
             Lo mejor de la naturaleza para tu piel y cabello
