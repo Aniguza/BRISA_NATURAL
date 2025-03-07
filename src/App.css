@@ -9,8 +9,8 @@
   --color-texto: #544b46;
   --color-butonPrimary: #ffead7;
   --font-titulos: "Lalezar", system-ui;
-  --color-tfooter: #FDEAD6;
-  --color-extra: #C8CEB7;
+  --color-tfooter: #fdead6;
+  --color-extra: #c8ceb7;
 
   --animate-icon: var(--animate-bounce); /* bounce 1s infinite */
 
@@ -25,8 +25,12 @@
       animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
   }
+
 }
 
 #root {
   margin: 0 auto;
 }
+.titulo-estilo {
+  @apply font-bold font-titulos text-primario text-2xl mb-10 lg:text-4xl;
+} 

@@ -21,8 +21,13 @@
     "@mui/material": "^6.4.6",
     "@tailwindcss/vite": "^4.0.9",
     "animate.css": "^4.1.1",
+    "framer-motion": "^12.4.10",
+    "ogl": "^1.0.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.3.0",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
     "tailwindcss": "^4.0.9"
   },
   "devDependencies": {
