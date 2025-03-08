@@ -1,10 +1,12 @@
+import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img_tar from "../../assets/img/tarjIni.png";
 
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
+import { useFetch } from "../api/apiService";
 
 const CustomPrevArrow = (props) => {
   const { className, onClick } = props;
@@ -12,7 +14,7 @@ const CustomPrevArrow = (props) => {
     <div
       className={`${className} custom-arrow`}
       onClick={onClick}
-      style={{ left: "-20px", color: "#71775c" }} // Ajusta la posición
+      style={{ left: "-20px", color: "#71775c" }}
     >
       <ArrowBackIosIcon />
     </div>
@@ -25,35 +27,31 @@ const CustomNextArrow = (props) => {
     <div
       className={`${className} custom-arrow`}
       onClick={onClick}
-      style={{ right: "-20px", color: "#71775c" }} // Ajusta la posición
+      style={{ right: "-20px", color: "#71775c" }}
     >
       <ArrowForwardIosIcon />
     </div>
   );
 };
 
-const cardsData = [
-  {
-    id: 1,
-    title: "Jabones",
-    description: "🌿 Limpieza y nutrición para tu piel",
-    img: img_tar,
-  },
-  {
-    id: 2,
-    title: "Sérum",
-    description: "✨ Tratamientos intensivos para una piel radiante",
-    img: img_tar,
-  },
-  {
-    id: 3,
-    title: "Cremas",
-    description: "💧 Nutrición y regeneración para un rostro saludable",
-    img: img_tar,
-  },
-];
-
 export const Tarjetas_Inicio = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const {
+    data: categoria,
+    loading: loadingCategoria,
+    error: errorCategoria,
+  } = useFetch("https://brisaback-production.up.railway.app/categoria/");
+
+  useEffect(() => {
+    if (!loadingCategoria) {
+      setIsLoading(false);
+    }
+  }, [loadingCategoria]);
+
+  console.log("Datos de categorías:", categoria);
+  console.log("Error:", errorCategoria);
+
   const settings = {
     dots: true,
     infinite: false,
@@ -65,7 +63,7 @@ export const Tarjetas_Inicio = () => {
     prevArrow: <CustomPrevArrow />,
     responsive: [
       {
-        breakpoint: 769,
+        breakpoint: 890,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -73,7 +71,6 @@ export const Tarjetas_Inicio = () => {
           dots: true,
         },
       },
-
       {
         breakpoint: 480,
         settings: {
@@ -87,24 +84,34 @@ export const Tarjetas_Inicio = () => {
   return (
     <div className="-z-10">
       <h1 className="text-center titulo-estilo">Lo que te ofrecemos</h1>
-      <div className="slider my-10 mx-auto w-70 sm:w-xl md:w-2xl xl:w-5xl">
-        <Slider {...settings}>
-          {cardsData.map((card) => (
-            <div key={card.id} className="px-4 ">
-              <div className="card-lg  bg-base-100 shadow-sm rounded-xl ">
-                <figure>
-                  <img src={card.img} alt={card.title} className="w-full" />
-                </figure>
-                <div className="card-body bg-extra rounded-b-lg">
-                  <h2 className="card-title text-secondario lg:text-2xl font-bold">
-                    {card.title}
-                  </h2>
-                  <p className="text-texto lg:text-base">{card.description}</p>
+      <div className="slider my-10 mx-auto w-70 sm:w-xl md:w-2xl xl:w-5xl ">
+        {errorCategoria ? (
+          <p>Error: {errorCategoria}</p>
+        ) : isLoading ? (
+          <p>Cargando categorías...</p>
+        ) : categoria.length === 0 ? (
+          <p>No hay categorías disponibles.</p>
+        ) : (
+          <Slider {...settings}>
+            {categoria.map((item) => (
+              <div key={item.id} className="px-4 ">
+                <div className="card-lg bg-base-100 shadow-sm rounded-xl border border-texto">
+                  <figure className="w-full ">
+                    <img src={item.imagen} alt={item.nombre} className="w-full rounded-t-xl" />
+                  </figure>
+                  <div className="card-body bg-extra rounded-b-lg">
+                    <h2 className="card-title text-secondario lg:text-2xl font-bold">
+                      {item.nombre}
+                    </h2>
+                    <p className="text-texto lg:text-base">
+                      {item.descripcion}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        )}
       </div>
     </div>
   );
