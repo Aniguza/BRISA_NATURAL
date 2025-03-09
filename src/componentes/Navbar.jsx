@@ -9,6 +9,8 @@ import { Burguer_icon } from "./burguer_icon";
 import Logo from "../assets/img/Logo.png";
 import { Link } from "react-router-dom";
 
+
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,27 +20,27 @@ export const Navbar = () => {
   return (
     <>
       <div className="">
-        <div className="navbar bg-white borde-none fixed top-0 z-10 h-18 justify-between">
+        <div className="navbar bg-white borde-none fixed top-0 z-10 h-18 justify-between ">
           <div className="flex flex-row ml-4 gap-4 items-center">
-            <div className="drawer w-max">
+            <div className="drawer w-max ">
               <input id="my-drawer" type="checkbox" className="drawer-toggle" />
               <div className="drawer-content">
                 {/* Page content here */}
                 <label
-                  className="md:hidden cursor-pointer w-min"
+                  className="md:hidden cursor-pointer w-min bg-amber-100"
                   htmlFor="my-drawer"
                   onClick={toggleDrawer}
                 >
                   <Burguer_icon />
                 </label>
               </div>
-              <div className="drawer-side mt-18">
+              <div className="drawer-side mt-18 ">
                 <label
                   htmlFor="my-drawer"
                   aria-label="close sidebar"
                   className="drawer-overlay"
                 ></label>
-                <div className="menu text-base-content min-h-full w-80 p-4 bg-primario ">
+                <div className="menu text-xl min-h-full w-70 p-4 bg-primario gap-3">
                   {/* Sidebar content here */}
                   <Menu />
                 </div>
