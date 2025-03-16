@@ -18,8 +18,8 @@ const Card = ({ title, description, Icon }) => {
 
         {/* Content */}
         <div className="pt-5 md:pt-12">
-          <h2 className="text-[#53594F] text-sm font-bold mb-2 md:text-2xl">{title}</h2>
-          <p className="text-[#53594F] text-[9px] leading-3 mb-6 texto_cono">{description}</p>
+          <h2 className="text-[#53594F] text-sm fuente-lale mb-2 md:text-2xl">{title}</h2>
+          <p className="text-[#53594F] text-[9px] font-rale leading-3 mb-6 texto_cono ">{description}</p>
         </div>
       </div>
     </div>

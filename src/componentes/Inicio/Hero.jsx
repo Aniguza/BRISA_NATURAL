@@ -16,14 +16,14 @@ export const Hero = () => {
         </div>
 
         <div className="flex flex-col items-start justify-center p-10 ">
-          <p class=" font-bold font-titulos text-primario text-2xl lg:text-5xl">
+          <p class=" font-lale text-primario text-2xl lg:text-5xl">
             COSMÉTICA NATURAL Y ORGÁNICA
           </p>
-          <p class="py-6 text-texto ">
+          <p class="py-6 pr-20 text-texto font-rale text-xl">
             Descubre el poder de la naturaleza en cada producto. Cuidamos tu
             piel y el medio ambiente.
           </p>
-          <button class="btn bg-butonPrimary text-black">Explorar más</button>
+          <button class="btn bg-butonPrimary text-texto font-rale text-xs border-none shadow-none">Explorar más</button>
         </div>
       </div>
 
@@ -39,7 +39,7 @@ export const Hero = () => {
 
           {/* Columna del texto */}
           <div className="flex items-center justify-center px-10 sm:px-8 md:px-10 lg:px-16 md:pb-0">
-            <p className="text-texto text-sm text-justify sm:text-base md:text-base lg:text-lg">
+            <p className="text-texto font-rale text-sm text-justify sm:text-base md:text-base lg:text-lg">
               Ofrecemos una cuidada selección de productos naturales para el cuidado de la piel, con jabones, cremas y serums faciales que nutren y embellecen de manera suave y efectiva. Además, puedes crear tu propio pack de rutina personalizado con estos tres esenciales.
             </p>
 

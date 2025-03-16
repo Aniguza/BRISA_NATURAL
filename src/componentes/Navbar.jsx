@@ -9,7 +9,8 @@ import { Burguer_icon } from "./burguer_icon";
 import Logo from "../assets/img/Logo.png";
 import { Link } from "react-router-dom";
 
-
+import { useContext } from "react";
+import { CartContext } from "./Tienda/CartContext";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,15 @@ export const Navbar = () => {
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
   };
+
+  const { cart } = useContext(CartContext);
+
+  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+  const subtotal = cart.reduce(
+    (acc, item) => acc + item.quantity * item.price,
+    0
+  );
+
   return (
     <>
       <div className="">
@@ -87,23 +97,59 @@ export const Navbar = () => {
                 <span className="indicator" tabIndex={0} role="button">
                   <ShoppingCartOutlinedIcon
                     fontSize="large"
-                    className="text-[#53594F] hover:text-[red] "
+                    className="text-[#53594F] hover:text-[red]"
                   />
-                  <span className="badge badge-sm indicator-item">8</span>
+                  {totalItems > 0 && (
+                    <span className="badge badge-sm indicator-item">
+                      {totalItems}
+                    </span>
+                  )}
                 </span>
               </span>
               <div
                 tabIndex={0}
-                className="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow"
+                className="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-60 shadow"
               >
                 <div className="card-body">
-                  <span className="text-lg font-bold">8 Items</span>
-                  <span className="text-info">Subtotal: $999</span>
-                  <div className="card-actions">
-                    <button className="btn btn-primary btn-block">
-                      View cart
-                    </button>
-                  </div>
+                  {cart.length > 0 ? (
+                    <>
+                      <span className="text-lg font-bold">
+                        {totalItems} Items
+                      </span>
+                      <span className="text-info">
+                        Subtotal: S/.{subtotal.toFixed(2)}
+                      </span>
+                      <ul className="max-h-60 overflow-auto">
+                        {cart.map((item) => (
+                          <li
+                            key={item.id}
+                            className="flex items-center justify-between border-b py-2"
+                          >
+                            <img
+                              src={item.image}
+                              alt={item.name}
+                              className="w-10 h-10 object-cover rounded"
+                            />
+                            <div className="flex-1 ml-2">
+                              <p className="text-sm">{item.name}</p>
+                              <p className="text-xs">
+                                S/. {item.price} x {item.quantity}
+                              </p>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="card-actions">
+                        <button className="btn btn-primary btn-block">
+                          Ver carrito
+                        </button>
+                      </div>
+                    </>
+                  ) : (
+                    <span className="text-center text-gray-500">
+                      El carrito está vacío
+                    </span>
+                  )}
                 </div>
               </div>
             </div>

@@ -49,9 +49,6 @@ export const Tarjetas_Inicio = () => {
     }
   }, [loadingCategoria]);
 
-  console.log("Datos de categorías:", categoria);
-  console.log("Error:", errorCategoria);
-
   const settings = {
     dots: true,
     infinite: false,
@@ -95,15 +92,15 @@ export const Tarjetas_Inicio = () => {
           <Slider {...settings}>
             {categoria.map((item) => (
               <div key={item.id} className="px-4 ">
-                <div className="card-lg bg-base-100 shadow-sm rounded-xl border border-texto">
+                <div className="card-lg bg-base-100 shadow-sm rounded-xl ">
                   <figure className="w-full ">
                     <img src={item.imagen} alt={item.nombre} className="w-full rounded-t-xl" />
                   </figure>
                   <div className="card-body bg-extra rounded-b-lg">
-                    <h2 className="card-title text-secondario lg:text-2xl font-bold">
+                    <h2 className="card-title text-secondario fuente-lale lg:text-2xl  ">
                       {item.nombre}
                     </h2>
-                    <p className="text-texto lg:text-base">
+                    <p className="text-texto font-rale lg:text-base">
                       {item.descripcion}
                     </p>
                   </div>

@@ -13,8 +13,8 @@ const Card = ({ title, description, Icon }) => {
         <Icon className="hidden sm:block" style={{ fontSize: window.innerWidth < 768 ? 30 : 50 }} /> 
       </div>
       <div className="card-body text-center items-center sm:w-50 xl:w-80">
-        <h2 className="card-title text-primario text-sm sm:text-xl">{title}</h2> 
-        <p className="text-texto text-xs lg:text-base ">{description}</p> 
+        <h2 className="card-title text-primario font-rale text-sm sm:text-xl">{title}</h2> 
+        <p className="text-texto text-xs font-rale lg:text-base ">{description}</p> 
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
 
@@ -8,9 +9,10 @@
   --color-secondario: #63613d;
   --color-texto: #544b46;
   --color-butonPrimary: #ffead7;
-  --font-titulos: "Lalezar", system-ui;
   --color-tfooter: #fdead6;
   --color-extra: #c8ceb7;
+  --font-lale: "Lalezar", system-ui;
+  --font-rale: "Raleway", system-ui;
 
   --animate-icon: var(--animate-bounce); /* bounce 1s infinite */
 
@@ -32,8 +34,12 @@
   margin: 0 auto;
 }
 
+.fuente-lale{
+  @apply font-lale font-light;
+}
+
 .titulo-estilo {
-  @apply font-bold font-titulos text-primario text-2xl mb-10 lg:text-4xl;
+  @apply font-extralight font-lale text-primario text-2xl mb-10 lg:text-4xl;
 }
 
 .hover_menu{
