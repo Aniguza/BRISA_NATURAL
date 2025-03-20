@@ -58,7 +58,7 @@ export const Navbar = () => {
             </div>
 
             <Link to="/" className="flex items-center gap-2 cursor-pointer">
-              <img src={Logo} alt="" className="w-22  lg:ml-15" />
+              <img src={Logo} alt="" className="w-15 lg:w-20 lg:ml-15" />
             </Link>
           </div>
 
@@ -93,11 +93,11 @@ export const Navbar = () => {
 
             {/* Carrito */}
             <div className="dropdown dropdown-end">
-              <span className="btn btn-ghost hover:text-[red] hover:bg-[transparent]">
+              <span className="btn bg-transparent hover:text-primario border-none shadow-none">
                 <span className="indicator" tabIndex={0} role="button">
                   <ShoppingCartOutlinedIcon
                     fontSize="large"
-                    className="text-[#53594F] hover:text-[red]"
+                    className="text-[#53594F] hover:text-primario "
                   />
                   {totalItems > 0 && (
                     <span className="badge badge-sm indicator-item">
@@ -155,7 +155,7 @@ export const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="join mt-18 items-center justify-center text-secondario w-full gap-20 h-10 border-y-1 font-bold hidden md:flex">
+        <div className="join mt-18 items-center justify-center text-secondario w-full gap-20 h-10 border-y-1 font-bold hidden md:flex fuente-lale uppercase">
           <Menu />
         </div>
       </div>

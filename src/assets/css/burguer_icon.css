@@ -1,7 +1,7 @@
 /* Icono */
 #nav-icon3 {
-    width: 30px; /* Tamaño reducido */
-    height: 22px; /* Ajuste proporcional */
+    width: 25px; /* Tamaño reducido */
+    height: 20px; /* Ajuste proporcional */
     position: relative;
     cursor: pointer;
     transition: 0.5s ease-in-out;

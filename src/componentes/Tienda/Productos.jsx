@@ -58,7 +58,7 @@ export const Productos = () => {
     : products;
 
   return (
-    <div className="container mx-auto px-30 py-10">
+    <div className="container mx-auto px-7 lg:px-30 py-10">
       {/* Categorías */}
       <div className="flex gap-4 overflow-x-auto pb-4 justify-center">
         {/* Botón para ver todos los productos */}

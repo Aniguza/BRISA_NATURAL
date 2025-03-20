@@ -25,9 +25,9 @@ const Card = ({ title, description, Icon }) => {
 
 export const Hero_tienda = () => {
   return (
-    <div className="px-30 py-10">
+    <div className=" px-10 lg:px-30 py-10">
       <div
-        className="hero h-134 "
+        className="hero lg:h-134 "
         style={{
           backgroundImage: `url(${hero})`,
           backgroundSize: "cover",
@@ -37,7 +37,7 @@ export const Hero_tienda = () => {
         }}
       >
         <div className="hero-content text-neutral-content text-center ">
-          <div className="relative grid grid-cols-2 gap-6 w-full ">
+          <div className="relative grid lg:grid-cols-2 gap-6 w-full">
             {/* Imagen del producto */}
             <div className="flex justify-center">
               <img
@@ -52,7 +52,7 @@ export const Hero_tienda = () => {
               <h1 className="text-5xl text-primario font-lale">
                 Elige tu rutina
               </h1>
-              <p className="py-6 pr-30 text-texto font-rale text-2xl text-start">
+              <p className="py-6 lg:pr-30 text-texto font-rale text-2xl text-justify lg:text-start">
                 Todo lo que necesitas para el cuidado de tu rostro, con nuestro
                 BrisaPack.
               </p>
@@ -63,8 +63,9 @@ export const Hero_tienda = () => {
           </div>
         </div>
       </div>
-      <div className="mt-10 bg-[#EFF5EC] p-10 rounded-2xl">
-        <div className="grid grid-cols-3 grid-rows-1 gap-4 text-center ">
+      {/* -----------*/}
+      <div className=" mt-10 bg-[#EFF5EC] p-10 rounded-2xl">
+        <div className="grid gap-8 grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 lg:gap-4 text-center ">
           <div className="">
             <Card
               Icon={LocalShippingOutlinedIcon}

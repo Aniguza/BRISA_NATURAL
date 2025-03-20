@@ -28,20 +28,20 @@ const Card = ({ title, description, Icon }) => {
 
 export const Mivi_conocenos = () => {
   return (
-    <div className="px-5 py-15 md:px-27 lg:px-40">
+    <div className="px-5 py-20 md:px-27 lg:px-90">
       <div className="grid grid-cols-2 grid-rows-1 gap-4 md:gap-8">
         <div>
           <Card
             Icon={RocketLaunchOutlinedIcon}
             title="Misión"
-            description="Crear productos de cuidado personal 100% naturales, combinando ingredientes locales y sostenibles para ofrecer bienestar a la piel, respetando el medio ambiente y promoviendo el consumo consciente."
+            description="Cosmética natural sostenible para cuidar tu piel, cabello y el planeta."
           />
         </div>
         <div>
           <Card
             Icon={LightbulbOutlinedIcon}
             title="Visión"
-            description="Ser una marca reconocida a nivel nacional e internacional por la calidad y autenticidad de nuestros productos naturales, contribuyendo al bienestar de las personas y al desarrollo sostenible de las comunidades."
+            description="Liderar la cosmética natural con innovación, bienestar y sostenibilidad."
           />
         </div>
       </div>
