@@ -10,7 +10,7 @@ export const Productos = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null); // Categoría seleccionada
-  const { cart, addToCart, updateQuantity } = useContext(CartContext);
+  const {cart, addToCart, updateQuantity} = useContext(CartContext);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -75,12 +75,12 @@ export const Productos = () => {
         {categories.map((category) => (
           <button
             key={category.id}
-            className={`flex flex-col items-center gap-2 px-4 py-2 rounded-md text-texto ${
-              selectedCategory === category.id ? "bg-icons text-white" : "bg-gray-200"
+            className={`flex flex-col items-center gap-2 px-4 py-2  text-texto ${
+              selectedCategory === category.id ? "border-b-2 text-icons" : "bg-transparent"
             }`}
             onClick={() => setSelectedCategory(category.id)}
           >
-            <img src={category.image} alt={category.name} className="w-16 h-16 object-cover rounded-full" />
+            <img src={category.image} alt={category.name} className="w-16 h-16 object-cover rounded-full border-solid border-black" />
             {category.name}
           </button>
         ))}

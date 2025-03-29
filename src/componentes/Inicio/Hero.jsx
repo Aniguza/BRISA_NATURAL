@@ -26,7 +26,6 @@ export const Hero = () => {
           <button class="btn bg-butonPrimary text-texto font-rale text-xs border-none shadow-none">Explorar más</button>
         </div>
       </div>
-
       {/* Hero Info */}
       <div className="rounded max-w-7xl mx-auto my-10 lg:my-15 overflow-hidden">
         <div className="flex flex-col md:grid md:grid-cols-2 md:grid-rows-1 md:gap-4">

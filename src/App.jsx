@@ -14,7 +14,7 @@ import { Tienda } from "./componentes/Tienda";
 import { DetalleProducto } from "./componentes/Productos/DetalleProducto";
 import { Blog } from "./componentes/Blog";
 import { Contacto } from "./componentes/Contacto";
-
+import { Carrito } from "./componentes/Tienda/Carrito";
 
 
 function App() {
@@ -23,9 +23,10 @@ function App() {
       <Router>
         <div className="animate__animated animate__fadeIn animate__slow">
           <Navbar />
-          <div className="mt-18 md:mt-0">
+          <div className="mt-18 md:mt-30">
             <Routes>
               <Route path="/" element={<Inicio />} />
+              <Route path="/Carrito" element={<Carrito />} />
               <Route path="/conocenos" element={<Conocenos />} />
               <Route path="/tienda" element={<Tienda />} />
               <Route path="/producto/:sku" element={<DetalleProducto />} />

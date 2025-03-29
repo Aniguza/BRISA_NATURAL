@@ -61,7 +61,6 @@ export const Navbar = () => {
               <img src={Logo} alt="" className="w-15 lg:w-20 lg:ml-15" />
             </Link>
           </div>
-
           <div className="flex gap-3-z-0 items-center md:gap-15 ">
             {/* Avatar/Usuario */}
             <div className="dropdown dropdown-end">
@@ -141,7 +140,9 @@ export const Navbar = () => {
                       </ul>
                       <div className="card-actions">
                         <button className="btn btn-primary btn-block">
-                          Ver carrito
+                          <Link to="/Carrito" className="hover_menu">
+                            Ver carrito
+                          </Link>
                         </button>
                       </div>
                     </>
@@ -154,9 +155,9 @@ export const Navbar = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="join mt-18 items-center justify-center text-secondario w-full gap-20 h-10 border-y-1 font-bold hidden md:flex fuente-lale uppercase">
-          <Menu />
+          <div className="join mt-28 bg-white items-center fixed justify-center text-secondario w-full gap-20 h-10 border-y-1 font-bold hidden md:flex fuente-lale uppercase">
+            <Menu />
+          </div>
         </div>
       </div>
     </>
