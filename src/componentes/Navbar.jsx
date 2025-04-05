@@ -5,7 +5,7 @@ import { useState } from "react";
 import { ShoppingCart } from "lucide-react";
 import { CircleUserRound } from "lucide-react";
 
-import { Burguer_icon } from "./burguer_icon";
+import { Burguer_icon } from "./Burguer_icon";
 import Logo from "../assets/img/Logo.png";
 import { Link } from "react-router-dom";
 
