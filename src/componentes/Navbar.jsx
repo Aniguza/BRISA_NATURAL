@@ -2,8 +2,8 @@
 import { Menu } from "./Menu";
 import { useState } from "react";
 
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { ShoppingCart } from "lucide-react";
+import { CircleUserRound } from "lucide-react";
 
 import { Burguer_icon } from "./burguer_icon";
 import Logo from "../assets/img/Logo.png";
@@ -64,11 +64,10 @@ export const Navbar = () => {
           <div className="flex gap-3-z-0 items-center md:gap-15 ">
             {/* Avatar/Usuario */}
             <div className="dropdown dropdown-end">
-              <AccountCircleIcon
-                fontSize="large"
+              <CircleUserRound
                 tabIndex={0}
                 role="button"
-                className="text-[#53594F] hover:text-[red]"
+                className="text-[#53594F] hover:text-extra w-6 h-6 lg:w-8 lg:h-8"
               />
 
               <ul
@@ -94,9 +93,8 @@ export const Navbar = () => {
             <div className="dropdown dropdown-end">
               <span className="btn bg-transparent hover:text-primario border-none shadow-none">
                 <span className="indicator" tabIndex={0} role="button">
-                  <ShoppingCartOutlinedIcon
-                    fontSize="large"
-                    className="text-[#53594F] hover:text-primario "
+                  <ShoppingCart
+                    className="text-[#53594F] hover:text-primario w-6 h-6 lg:w-8 lg:h-8"
                   />
                   {totalItems > 0 && (
                     <span className="badge badge-sm indicator-item">

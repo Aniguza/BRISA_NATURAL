@@ -1,6 +1,8 @@
 import React from "react";
 import RocketLaunchOutlinedIcon from "@mui/icons-material/RocketLaunchOutlined";
-import LightbulbOutlinedIcon from "@mui/icons-material/LightbulbOutlined";
+import LightbulbOutlinedIcon  from "@mui/icons-material/LightbulbOutlined";
+
+
 
 const Card = ({ title, description, Icon }) => {
   return (
@@ -8,10 +10,9 @@ const Card = ({ title, description, Icon }) => {
       <div className="bg-extra rounded-3xl p-5 text-center relative h-full lg:px-11">
         {/* Circle with Icon */}
         <div className="absolute -top-8 left-1/2 -translate-x-1/2 lg:-top-12">
-          <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center border-3 border-icons resp-icons lg:border-5">
+          <div >
             <Icon
-              className="hidden sm:block text-icons"
-              style={{ fontSize: window.innerWidth < 1024 ? 35 : 50 }}
+              className=" text-icons"
             />
           </div>
         </div>

@@ -38,7 +38,7 @@ export const DetalleProducto = () => {
           });
         }
       })
-      .catch((error) => console.error("Error fetching products:", error));
+      // .catch((error) => console.error("Error fetching products:", error));
   }, [sku]);
 
   if (!product) return <p>Cargando...</p>;

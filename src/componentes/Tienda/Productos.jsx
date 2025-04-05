@@ -41,11 +41,11 @@ export const Productos = () => {
             name: product.nombre,
             price: product.precio,
             image: product.img1 || "/placeholder.svg",
-            categoryId: product.categoria, // ID de la categoría
+            categoryId: product.categoria,
           }))
         );
       } catch (error) {
-        console.error("Error fetching data:", error);
+        // console.error("Error fetching data:", error);
       }
     };
 
