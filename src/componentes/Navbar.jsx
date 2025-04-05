@@ -50,7 +50,7 @@ export const Navbar = () => {
                   aria-label="close sidebar"
                   className="drawer-overlay"
                 ></label>
-                <div className="menu text-xl min-h-full w-70 p-4 bg-primario gap-3">
+                <div className="menu text-xl min-h-full w-full p-4 bg-primario gap-3">
                   {/* Sidebar content here */}
                   <Menu />
                 </div>
