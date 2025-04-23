@@ -16,6 +16,7 @@ import { Blog } from "./componentes/Blog";
 import { Contacto } from "./componentes/Contacto";
 import { Carrito } from "./componentes/Tienda/Carrito";
 
+import { AuthProvider } from "./componentes/AuthContext";
 
 function App() {
   return (
