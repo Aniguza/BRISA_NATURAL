@@ -43,7 +43,7 @@
 }
 
 .hover_menu{
-  @apply  hover:underline ;
+  @apply  hover:text-primario ;
 }
 
 /* Resposive tablet y pc - CONOCENOS */

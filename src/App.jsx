@@ -19,9 +19,11 @@ import { Carrito } from "./componentes/Tienda/Carrito";
 
 function App() {
   return (
-    <CartProvider>
-      <Router>
-        <div className="animate__animated animate__fadeIn animate__slow">
+
+    <AuthProvider>
+  <CartProvider>
+    <Router>
+    <div className="animate__animated animate__fadeIn animate__slow">
           <Navbar />
           <div className="mt-18 md:mt-30">
             <Routes>
@@ -36,8 +38,9 @@ function App() {
           </div>
           <Footer />
         </div>
-      </Router>
-    </CartProvider>
+    </Router>
+  </CartProvider>
+</AuthProvider>
   );
 }
 
