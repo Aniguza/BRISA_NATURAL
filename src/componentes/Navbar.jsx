@@ -153,7 +153,7 @@ export const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="join mt-28 bg-white items-center fixed justify-center text-secondario w-full gap-20 h-10 border-y-1 font-bold hidden md:flex fuente-lale uppercase">
+          <div className="join mt-28 bg-white items-center fixed justify-center text-secondario w-full gap-20 h-10 border-y-1 font-bold hidden md:flex right-0 fuente-lale uppercase">
             <Menu />
           </div>
         </div>

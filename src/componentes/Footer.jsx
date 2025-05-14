@@ -6,6 +6,7 @@ import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import { Menu } from "./Menu";
+import { Link } from "react-router-dom";
 
 import libro from "../assets/img/libro_recl.jpg";
 
@@ -15,7 +16,13 @@ export const Footer = () => {
       <footer className="footer w-full bg-icons sm:footer-horizontal py-10 px-10 lg:px-90  font-rale items-center text-tfooter">
         <nav>
           <h6 className="footer-title">Enlaces</h6>
-          <div className="flex flex-col gap-5"><Menu /></div>
+          <div className="flex flex-col gap-5">
+            <a className="link link-hover"><Link to="/" >Inicio</Link></a>
+            <a className="link link-hover"><Link to="/Conocenos">Conócenos</Link></a>
+            <a className="link link-hover"><Link to="/Tienda">Tienda</Link></a>
+            <a className="link link-hover"><Link to="/Blog">Blog</Link></a>
+            <a className="link link-hover"><Link to="/Contacto">Contacto</Link></a>
+          </div>
           
         </nav>
         <nav>

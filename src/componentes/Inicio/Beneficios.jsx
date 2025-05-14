@@ -23,9 +23,6 @@ const Card = ({ title, description, Icon }) => {
 export const Beneficios = () => {
   return (
     <div className="text-center mt-15 mb-10">
-      <h1 className="titulo-estilo">
-        Nuestros productos
-      </h1>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4 max-w-7xl mx-auto justify-items-center">
         {/* Tarjeta 1 */}
         <div>
@@ -38,7 +35,7 @@ export const Beneficios = () => {
 
         {/* Imagen */}
         <div className="hidden sm:flex sm:col-span-1 sm:row-span-2 items-center justify-center ">
-          <img src={img_prod} alt="imagen" className="w-60 h-auto" />
+          <img src={img_prod} alt="imagen" className="w-80 h-auto" />
         </div>
 
         {/* Tarjeta 2 */}

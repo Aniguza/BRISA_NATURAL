@@ -79,9 +79,9 @@ export const Tarjetas_Inicio = () => {
   };
 
   return (
-    <div className="-z-10">
-      <h1 className="text-center titulo-estilo">Lo que te ofrecemos</h1>
-      <div className="slider my-10 mx-auto w-70 sm:w-xl md:w-2xl xl:w-5xl ">
+    <div className="-z-10 bg-white">
+      <h1 className="text-center titulo-estilo">Rinde más, gasta menos y vive mejor.</h1>
+      <div className="slider my-10 mx-auto w-70 sm:w-xl md:w-3xl xl:w-5xl">
         {errorCategoria ? (
           <p>Error: {errorCategoria}</p>
         ) : isLoading ? (
@@ -91,12 +91,12 @@ export const Tarjetas_Inicio = () => {
         ) : (
           <Slider {...settings}>
             {categoria.map((item) => (
-              <div key={item.id} className="px-4 ">
+              <div key={item.id} className="px-4 shadow-2xs hover:-translate-y-4 transition-transform">
                 <div className="card-lg bg-base-100 shadow-sm rounded-xl ">
                   <figure className="w-full ">
                     <img src={item.imagen} alt={item.nombre} className="w-full rounded-t-xl" />
                   </figure>
-                  <div className="card-body bg-extra rounded-b-lg">
+                  <div className="card-body bg-extra rounded-b-lg h-50 flex items-center">
                     <h2 className="card-title text-secondario fuente-lale lg:text-2xl  ">
                       {item.nombre}
                     </h2>

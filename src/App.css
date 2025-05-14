@@ -7,6 +7,7 @@
   --color-icons: #71775c;
   --color-primario: #898e6b;
   --color-secondario: #63613d;
+  --color-gray-bg: #F6F6F6;
   --color-texto: #544b46;
   --color-butonPrimary: #ffead7;
   --color-tfooter: #fdead6;
@@ -39,11 +40,11 @@
 }
 
 .titulo-estilo {
-  @apply font-extralight font-lale text-primario text-2xl mb-10 lg:text-4xl;
+  @apply font-extralight font-lale text-primario text-2xl lg:text-4xl;
 }
 
 .hover_menu{
-  @apply  hover:text-primario ;
+  @apply  hover:text-primario hover:underline ;
 }
 
 /* Resposive tablet y pc - CONOCENOS */
