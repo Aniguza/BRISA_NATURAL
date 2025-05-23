@@ -1,18 +1,17 @@
 import React from "react";
 
-import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
-import YardOutlinedIcon from "@mui/icons-material/YardOutlined";
-import HandshakeOutlinedIcon from "@mui/icons-material/HandshakeOutlined";
-import BiotechOutlinedIcon from "@mui/icons-material/BiotechOutlined";
+import { Star } from "lucide-react";
+import { Sprout } from "lucide-react";
+import { Handshake } from "lucide-react";
+import { Microscope } from "lucide-react";
 
 const Card = ({ title, Icon, descripcion }) => {
   return (
-    <div className="tooltip tooltip-left" data-tip={descripcion}>
-      <div className="  flex flex-col gap-3 items-center py-10">
+    <div className="tooltip tooltip-top" data-tip={descripcion}>
+      <div className="flex flex-col gap-3 items-center py-6">
         <div className="w-16 h-16 rounded-full bg-extra flex items-center justify-center resp-icons">
           <Icon
-            className="hidden sm:block text-icons "
-            style={{ fontSize: window.innerWidth < 768 ? 30 : 50 }}
+            className="w-6 h-6 md:w-12 sm:h-12  text-icons "
           />
         </div>
         <p className="text-xs text-texto md:text-lg lg:font-bold">{title}</p>
@@ -29,25 +28,25 @@ export const Valores = () => {
       <div className="grid grid-cols-4 grid-rows-1 gap-2 items-center px-5 md:px-20 lg:px-60 font-rale">
         <div>
           <Card
-            Icon={YardOutlinedIcon}
+            Icon={Star}
             title="Sostenibilidad"
             descripcion="Desarrollamos productos amigables con el medio ambiente y promovemos la economía circular."/>
         </div>
         <div>
           <Card
-            Icon={YardOutlinedIcon}
+            Icon={Sprout}
             title="Bienestar"
             descripcion="Creemos en una belleza saludable y accesible, que nutra tanto la piel como la confianza de nuestras clientes."/>
         </div>
         <div>
           <Card
-            Icon={HandshakeOutlinedIcon}
+            Icon={Handshake}
             title="Autenticidad"
             descripcion="Nuestros cosméticos están formulados con ingredientes naturales y cuidadosamente seleccionados."/>
         </div>
         <div>
           <Card
-            Icon={HandshakeOutlinedIcon}
+            Icon={Microscope}
             title="Compromiso"
             descripcion="Trabajamos con comunidades locales para fomentar prácticas ecológicas y educación ambiental."/>
         </div>

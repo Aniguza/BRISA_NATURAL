@@ -58,13 +58,13 @@ export const Productos = () => {
     : products;
 
   return (
-    <div className="container mx-auto px-7 lg:px-30 py-10">
+    <div className="container mx-auto px-3 lg:px-30 py-10">
       {/* Categorías */}
       <div className="flex gap-4 overflow-x-auto pb-4 justify-center">
         {/* Botón para ver todos los productos */}
         <button
-          className={`min-w-[100px] px-4 py-2 rounded-md ${
-            selectedCategory === null ? "bg-[#8B9D7B] text-white" : "bg-gray-200"
+          className={`min-w-[100px] px-4 py-2 rounded-md text-black ${
+            selectedCategory === null ? "bg-primario text-white" : "bg-extra"
           }`}
           onClick={() => setSelectedCategory(null)}
         >
@@ -87,7 +87,7 @@ export const Productos = () => {
       </div>
 
       {/* Productos */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+      <div className="grid grid-cols-2 gap-2 mt-6 md:gap-5 sm:grid-cols-3 lg:grid-cols-4 ">
         {filteredProducts.length === 0 ? (
           <p className="text-center text-gray-500 col-span-full">No hay productos en esta categoría.</p>
         ) : (
@@ -133,11 +133,11 @@ export const Productos = () => {
                     </div>
                   ) : (
                     <button
-                      className="w-full py-2 bg-[#8B9D7B] text-white rounded-md font-rale hover:bg-[#7A8C6A] transition-colors flex items-center justify-center gap-2"
+                      className="w-full py-2 bg-[#8B9D7B] text-white text-sm rounded-md font-rale hover:bg-[#7A8C6A] transition-colors flex items-center justify-center gap-2"
                       onClick={() => addToCart(product)}
                     >
                       <ShoppingCartOutlinedIcon className="w-5 h-5" />
-                      Agregar al carrito
+                      Agregar
                     </button>
                   )}
                 </div>

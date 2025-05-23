@@ -1,4 +1,5 @@
-import React from "react";
+import ScrollToTop from "./componentes/ScrollToTop";
+
 import "animate.css";
 import { CartProvider } from "./componentes/Tienda/CartContext";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -27,6 +28,7 @@ function App() {
     <AuthProvider>
       <CartProvider>
         <Router>
+          <ScrollToTop />
           <div className="animate__animated animate__fadeIn animate__slow">
             <Navbar />
             <div className="mt-18 md:mt-28">
