@@ -4,7 +4,7 @@ import Hero from "../../assets/img/img_historia.png";
 export const Hero_conocenos = () => {
   return (
     <div className="hero bg-extra h-full py-3 md:p-10 lg:px-45 lg:py-15 xl:px-40">
-      <div className="hero-content flex-row-reverse md:gap-7">
+      <div className="hero-content flex-row-reverse md:gap-15">
         <div>
           <img src={Hero} className="hidden md:flex w-sm md:pr-4 md:w-6xl" />
         </div>
@@ -15,7 +15,7 @@ export const Hero_conocenos = () => {
           <p className="py-3 text-justify md:text-[8px] md:leading-3 text-texto font-rale texto_cono">
             Brisa Natural nació en octubre de 2023 con un propósito claro:
             revolucionar la cosmética tradicional ofreciendo productos
-            naturales, efectivos y sostenibles. <br /> <br />Creemos que la belleza no debe
+            naturales, efectivos y sostenibles. Creemos que la belleza no debe
             comprometer el bienestar del planeta, por eso desarrollamos fórmulas
             que cuidan la piel y el cabello sin dañar el medio ambiente. <br /><br />
             Comenzamos nuestra aventura en el Centro Comercial "El Algarrobo",

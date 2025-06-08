@@ -25,7 +25,7 @@ export const Valores = () => {
       <h1 className="text-xs font-bold text-secondario fuente-lale md:text-2xl">
         VALORES DE NUESTRA EMPRESA
       </h1>
-      <div className="grid grid-cols-4 grid-rows-1 gap-2 items-center px-5 md:px-20 lg:px-60 font-rale">
+      <div className="grid grid-cols-4 grid-rows-1 items-center px-5 md:px-20 lg:px-70 font-rale">
         <div>
           <Card
             Icon={Star}
