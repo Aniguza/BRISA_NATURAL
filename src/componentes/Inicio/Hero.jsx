@@ -18,12 +18,12 @@ export const Hero = () => {
           <p className=" font-lale text-primario text-2xl lg:text-5xl">
             COSMÉTICA NATURAL Y ORGÁNICA
           </p>
-          <p className="py-6 pr-20 text-texto font-rale text-xl">
+          <p className="py-6 pr-30 text-texto font-rale text-lg">
             Descubre el poder de la naturaleza en cada producto. Cuidamos tu
             piel y el medio ambiente.
           </p>
-          <button className="btn bg-butonPrimary text-texto font-rale text-xs border-none shadow-md hover:bg-butonPrimary/75">
-          <Link to="/Tienda" className="hover_menu  ">Conóce lo Natural</Link></button>
+          <button className="btn bg-butonPrimary text-texto font-rale text-sm border-none shadow-md hover:bg-butonPrimary/75">
+          <Link to="/Tienda" className="hover_menu  ">Conoce lo Natural</Link></button>
         </div>
       </div>
       {/* Hero Info */}

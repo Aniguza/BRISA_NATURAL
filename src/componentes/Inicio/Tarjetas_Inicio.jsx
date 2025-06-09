@@ -79,8 +79,8 @@ export const Tarjetas_Inicio = () => {
   };
 
   return (
-    <div className="-z-10 bg-white">
-      <h1 className="text-center titulo-estilo">Rinde más, gasta menos y vive mejor.</h1>
+    <div className="flex flex-col -z-10 bg-white items-center">
+      <h1 className="text-center titulo-estilo w-50">Rinde más, gasta menos y vive mejor.</h1>
       <div className="slider my-10 mx-auto w-70 sm:w-xl md:w-3xl xl:w-5xl">
         {errorCategoria ? (
           <p>Error: {errorCategoria}</p>

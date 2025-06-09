@@ -31,7 +31,7 @@ function App() {
           <ScrollToTop />
           <div className="animate__animated animate__fadeIn animate__slow">
             <Navbar />
-            <div className="mt-18 md:mt-28">
+            <div className="mt-18 md:mt-18">
               <Routes>
                 <Route path="/" element={<Inicio />} />
                 <Route path="/Carrito" element={<Carrito />} />

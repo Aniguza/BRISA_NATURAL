@@ -15,7 +15,7 @@ export const Footer = () => {
     <>
       <footer className="footer w-full bg-icons sm:footer-horizontal py-16 px-10 lg:px-90 font-rale items-center text-tfooter">
         <nav>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 lg:pl-15">
             <a className="link link-hover"><Link to="/" >Inicio</Link></a>
             <a className="link link-hover"><Link to="/Conocenos">Conócenos</Link></a>
             <a className="link link-hover"><Link to="/Tienda">Tienda</Link></a>
@@ -25,13 +25,13 @@ export const Footer = () => {
           
         </nav>
         <nav>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 lg:pl-15">
           <a className="link link-hover">¿Cómo comprar?</a>
           <a className="link link-hover">Términos y condiciones</a>
           <a className="link link-hover">Cambios y devoluciones</a>
           <a className="link link-hover">Privacidad de datos</a></div>
         </nav>
-        <nav>
+        <nav className="lg:pl-10">
           <img src={libro} alt="Libro_reclamaciones" className="w-30" />
           <h6 className="footer-title mt-8">Social</h6>
           <div className="grid grid-flow-col gap-7">

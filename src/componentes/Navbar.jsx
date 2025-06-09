@@ -63,8 +63,11 @@ export const Navbar = () => {
               <img src={Logo} alt="" className="w-15 lg:w-20 lg:ml-15" />
             </Link>
           </div>
-          <div className="flex gap-3-z-0 items-center md:gap-15 ">
+          <div className="flex gap-3-z-0 lg:mr-50 items-center md:gap-15 ">
             {/* Avatar/Usuario */}
+            <div className="  items-center fixed justify-center text-secondario w-full gap-20 h-10 font-bold hidden md:flex right-0 fuente-lale uppercase">
+              <Menu />
+            </div>
             <div className="dropdown dropdown-end">
               <CircleUserRound
                 tabIndex={0}
@@ -74,19 +77,19 @@ export const Navbar = () => {
 
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content bg-primario rounded-box z-[1] mt-3 w-30 p-2 shadow"
               >
                 <li>
                   <a className="justify-between">
-                    Profile
-                    <span className="badge">New</span>
+                    Perfil
+                    {/* <span className="badge">New</span> */}
                   </a>
                 </li>
                 <li>
                   <a>Settings</a>
                 </li>
                 <li>
-                  <a>Logout</a>
+                  <a>Cerrar sesión</a>
                 </li>
               </ul>
             </div>
@@ -158,9 +161,7 @@ export const Navbar = () => {
               )}
             </div>
           </div>
-          <div className="join mt-28 bg-white items-center fixed justify-center text-secondario w-full gap-20 h-10 border-y-1 font-bold hidden md:flex right-0 fuente-lale uppercase">
-            <Menu />
-          </div>
+
         </div>
       </div>
 
