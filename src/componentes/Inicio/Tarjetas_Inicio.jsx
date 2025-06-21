@@ -41,7 +41,7 @@ export const Tarjetas_Inicio = () => {
     data: categoria,
     loading: loadingCategoria,
     error: errorCategoria,
-  } = useFetch("https://brisaback-production.up.railway.app/categoria/");
+  } = useFetch("https://backend-production-9307.up.railway.app/categoria/");
 
   useEffect(() => {
     if (!loadingCategoria) {

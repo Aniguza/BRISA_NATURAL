@@ -57,3 +57,20 @@
 .redes{
   @apply sm:text-xl md:text-2xl border rounded-full p-3 w-6 cursor-pointer;
 }
+
+/* Estilos conócenos*/
+.co-label{
+  @apply text-[13px] font-rale;
+}
+.co-input{
+  @apply bg-white border-texto rounded-xl;
+}
+.file-input {
+  --btn-color: #898E6B;
+}
+.img-cont{
+  width: 400px;
+  height: 555px;
+  object-fit: cover;
+  border-radius: 20px;
+}

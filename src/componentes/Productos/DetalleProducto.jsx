@@ -5,7 +5,7 @@ import { CartContext } from "../Tienda/CartContext";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-const API_URL = "https://brisaback-production.up.railway.app/productos/";
+const API_URL = "https://backend-production-9307.up.railway.app/productos/";
 
 export const DetalleProducto = () => {
   const navigate = useNavigate();

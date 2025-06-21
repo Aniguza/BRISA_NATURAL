@@ -51,3 +51,6 @@
 .texto_cono {
   @apply md:text-[16px] md:leading-5 lg:text-[20px] lg:leading-6 xl:text-[17px];
 }
+.file-input-neutral {
+    --btn-color: #898E6B;
+}

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { CartContext } from "./CartContext";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
-const API_PROD = "https://brisaback-production.up.railway.app/productos/";
-const API_CAT = "https://brisaback-production.up.railway.app/categoria/";
+const API_PROD = "https://backend-production-9307.up.railway.app/productos/";
+const API_CAT = "https://backend-production-9307.up.railway.app/categoria/";
 
 export const Productos = () => {
   const [products, setProducts] = useState([]);
