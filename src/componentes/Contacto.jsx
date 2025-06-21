@@ -11,7 +11,7 @@ export const Contacto = () => {
           <img src={foto} alt="" className='img-cont' />
         </div>
         <div>
-          <fieldset className="fieldset text-secondario w-80">
+          <fieldset className="fieldset text-secondario w-90">
             <label className="fieldset co-label">Nombre completo</label>
             <input type="text" placeholder="Juan Pérez" className="input co-input" />
 

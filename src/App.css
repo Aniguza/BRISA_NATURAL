@@ -63,7 +63,7 @@
   @apply text-[13px] font-rale;
 }
 .co-input{
-  @apply bg-white border-texto rounded-xl;
+  @apply bg-white border-texto rounded-xl w-90;
 }
 .file-input {
   --btn-color: #898E6B;
