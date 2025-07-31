@@ -16,6 +16,7 @@ import { DetalleProducto } from "./componentes/Productos/DetalleProducto";
 import { Blog } from "./componentes/Blog";
 import { Contacto } from "./componentes/Contacto";
 import { Carrito } from "./componentes/Tienda/Carrito";
+import { PagoForm } from "./componentes/Tienda/PagoForm";
 import { Login } from "./componentes/Login";
 // ...
 <Route path="/login" element={<Login />} />
@@ -34,13 +35,14 @@ function App() {
             <div className="mt-18 md:mt-18">
               <Routes>
                 <Route path="/" element={<Inicio />} />
-                <Route path="/Carrito" element={<Carrito />} />
+                <Route path="/carrito" element={<Carrito />} />
                 <Route path="/conocenos" element={<Conocenos />} />
                 <Route path="/tienda" element={<Tienda />} />
                 <Route path="/producto/:sku" element={<DetalleProducto />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/contacto" element={<Contacto />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/pagoForm" element={<PagoForm />} />
               </Routes>
             </div>
             <Footer />
