@@ -31,7 +31,7 @@ export const PagoForm = () => {
     return (
         <div className=" bg-gray-100 min-h-screen text-black">
             <p className="flex ml-22 pt-10 text-[30px] font-bold">Pagar pedido</p>
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center ">
                 <div className="flex items-start md:flex-row gap-6 p-6 ">
                     {/* Datos del cliente */}
                     <div className="w-full md:w-2/3 bg-white p-6 rounded-xl shadow-md">
@@ -57,6 +57,7 @@ export const PagoForm = () => {
                                         Región:
                                     </label>
                                     <select
+                                    required
                                         disabled
                                         className="border p-2 rounded w-full bg-gray-100 text-gray-700"
                                     >
@@ -85,6 +86,7 @@ export const PagoForm = () => {
                                 </div>
                             </div>
                             <input type="text" placeholder="Código postal / ZIP" className="border p-2 rounded" required />
+                            <button className="btn w-20 bg-secondario hover:bg-icons border-none">Enviar</button>
                         </form>
                     </div>
 
