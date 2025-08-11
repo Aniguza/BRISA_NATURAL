@@ -2,6 +2,7 @@ import React from "react";
 import { Trash } from "lucide-react";
 import { CartContext } from "./CartContext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 export const Carrito = () => {
   const { cart, updateQuantity, removeFromCart } = useContext(CartContext);
@@ -103,9 +104,10 @@ export const Carrito = () => {
             </div>
           </div>
 
-          <button className="w-full bg-extra text-texto font-semibold py-2 mt-4 rounded-lg cursor-pointer hover:bg-butonPrimary transition">
+          <Link to="/PagoForm" className="hover_menu">
             Finalizar compra
-          </button>
+          </Link>
+          
         </div>
       </div>
     </div>
