@@ -23,7 +23,7 @@ export const Contacto = () => {
 
             <textarea className="textarea co-input mt-5" placeholder="Mensaje"></textarea>
 
-            <input type="file" className="file-input file-input co-input mt-5" />
+            <input type="file" className="file-input co-input mt-5" />
 
             <label className="label mt-5">
               <input type="checkbox" className="checkbox border-secondario checked:bg-secondario" />No soy un robot</label>

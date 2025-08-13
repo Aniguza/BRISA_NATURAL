@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Trash } from "lucide-react";
 import { CartContext } from "./CartContext";
-import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 export const Carrito = () => {
@@ -16,21 +15,22 @@ export const Carrito = () => {
   const total = subtotal - descuento;
 
   return (
-    <div className="flex justify-center gap-9 py-10">
-      <div className="w">
+    <div className="flex flex-col lg:flex-row justify-center gap-9 py-10 px-4">
+      {/* Lista de productos */}
+      <div className="w-full lg:w-2/3">
         <div className="space-y-6">
           {cart.length > 0 ? (
             cart.map((item) => (
               <div
                 key={item.id}
-                className="flex items-center justify-between border-b border-extra pb-4 gap-6"
+                className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-extra pb-4 gap-4 sm:gap-6"
               >
-                {/* Imagen del producto */}
-                <div className="flex items-center gap-4">
+                {/* Imagen y detalles */}
+                <div className="flex items-center gap-4 w-full sm:w-auto">
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-16 h-16 object-cover rounded-md"
+                    className="w-20 h-20 object-cover rounded-md"
                   />
                   <div>
                     <h3 className="font-bold text-lg text-primario">
@@ -43,8 +43,8 @@ export const Carrito = () => {
                   </div>
                 </div>
 
-                {/* Controles de cantidad y eliminar */}
-                <div className="flex items-center gap-4">
+                {/* Controles */}
+                <div className="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-end">
                   <div className="flex flex-col gap-1">
                     <div className="flex items-center border border-gray-300 rounded-md">
                       <button
@@ -82,9 +82,9 @@ export const Carrito = () => {
         </div>
       </div>
 
-      {/*-------Pagoo-----*/}
-      <div className="flex justify-center">
-        <div className=" p-6 rounded-lg  w-80">
+      {/* Resumen */}
+      <div className="w-full lg:w-1/3 flex justify-center">
+        <div className="p-6 rounded-lg w-full max-w-sm bg-white shadow-sm">
           <h2 className="text-lg font-bold text-primario mb-4">
             Resumen de la orden
           </h2>
@@ -104,12 +104,15 @@ export const Carrito = () => {
             </div>
           </div>
 
-          <Link to="/PagoForm" className="hover_menu">
+          <Link
+            to="/PagoForm"
+            className="block w-full mt-4 bg-primario text-white text-center py-2 rounded-md hover:bg-opacity-90 transition"
+          >
             Finalizar compra
           </Link>
-          
         </div>
       </div>
     </div>
   );
 };
++
