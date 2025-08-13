@@ -94,7 +94,7 @@ export const Tarjetas_Inicio = () => {
               <div key={item.id} className="px-4 shadow-2xs hover:-translate-y-4 transition-transform">
                 <div className="card-lg bg-base-100 shadow-sm rounded-xl ">
                   <figure className="w-full ">
-                    <img src={item.imagen} alt={item.nombre} className="w-full rounded-t-xl" />
+                    <img src={item.imagen} alt={item.nombre} className="w-250 h-80 object-cover rounded-t-xl" />
                   </figure>
                   <div className="card-body bg-extra rounded-b-lg h-50 flex items-center">
                     <h2 className="card-title text-secondario fuente-lale lg:text-2xl  ">

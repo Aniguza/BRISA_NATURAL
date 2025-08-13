@@ -10,7 +10,7 @@ export const Productos = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null); // Categoría seleccionada
-  const {cart, addToCart, updateQuantity} = useContext(CartContext);
+  const { cart, addToCart, updateQuantity } = useContext(CartContext);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,6 +35,7 @@ export const Productos = () => {
         setCategories(visibleCategories);
 
         // Guardar los productos con su relación de categoría
+        // Guardar los productos con su relación de categoría y el estado active
         setProducts(
           prodData.map((product) => ({
             id: product.sku,
@@ -42,6 +43,7 @@ export const Productos = () => {
             price: product.precio,
             image: product.img1 || "/placeholder.svg",
             categoryId: product.categoria,
+            active: product.active // <-- aquí guardas el estado activo
           }))
         );
       } catch (error) {
@@ -54,8 +56,10 @@ export const Productos = () => {
 
   // Filtrar productos por categoría seleccionada
   const filteredProducts = selectedCategory
-    ? products.filter((product) => product.categoryId === selectedCategory)
-    : products;
+    ? products.filter(
+      (product) => product.active && product.categoryId === selectedCategory
+    )
+    : products.filter((product) => product.active);
 
   return (
     <div className="container mx-auto px-3 lg:px-30 py-10">
@@ -63,9 +67,8 @@ export const Productos = () => {
       <div className="flex gap-4 overflow-x-auto pb-4 justify-center">
         {/* Botón para ver todos los productos */}
         <button
-          className={`min-w-[100px] px-4 py-2 rounded-md text-black ${
-            selectedCategory === null ? "bg-primario text-white" : "bg-extra"
-          }`}
+          className={`min-w-[100px] px-4 py-2 rounded-md text-black ${selectedCategory === null ? "bg-primario text-white" : "bg-extra"
+            }`}
           onClick={() => setSelectedCategory(null)}
         >
           Todas
@@ -75,9 +78,8 @@ export const Productos = () => {
         {categories.map((category) => (
           <button
             key={category.id}
-            className={`flex flex-col items-center gap-2 px-4 py-2  text-texto ${
-              selectedCategory === category.id ? "border-b-2 text-icons" : "bg-transparent"
-            }`}
+            className={`flex flex-col items-center gap-2 px-4 py-2  text-texto ${selectedCategory === category.id ? "border-b-2 text-icons" : "bg-transparent"
+              }`}
             onClick={() => setSelectedCategory(category.id)}
           >
             <img src={category.image} alt={category.name} className="w-16 h-16 object-cover rounded-full border-solid border-black" />
